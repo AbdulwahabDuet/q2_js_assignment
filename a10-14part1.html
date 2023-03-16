@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part1</title>
+</head>
+<body>
+    <script>
+        Number(num1 = window.prompt("Enter num1="));
+        Number(num2 = window.prompt("Enter num2="));
+        
+        sign= window.prompt("Enter Sign + or - or * or / or %");
+        if(sign=="+"){
+            var result = num1 + num2;
+        }
+        else if(sign=="-"){
+            var result = num1 - num2;
+        }
+        else if(sign=="*"){
+            var result = num1 * num2;
+        }
+        else if(sign=="/"){
+            var result = num1 / num2;
+        }
+        else if(sign=="%"){
+            var result = num1 % num2;
+        }
+        else{
+            alert("Incorrect Sign Enter");
+        }
+        window.alert(result);
+    </script>
+</body>
+</html>

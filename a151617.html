@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 15 to 17</title>
+</head>
+<body>
+    <script>
+        var courses = [];
+        var courses1= prompt("Courses 1","computer");
+        var courses2= prompt("Courses 2","science");
+        var courses3= prompt("Courses 3","english");
+        var courses4= prompt("Courses 4","urdu");
+        var courses5= prompt("Courses 5","Pst");
+        courses.push(courses1,courses2,courses3,courses4,courses5);    
+        alert(courses);
+        courses1= prompt("Courses 1 = ",courses[0]);
+        courses2= prompt("Courses 2 = ",courses[1]);
+        courses3= prompt("Courses 3 = ",courses[2]);
+        courses4= prompt("Courses 4 = ",courses[3]);
+        courses5= prompt("Courses 5 = ",courses[4]);
+    
+        if(courses1 != courses[0]){
+            courses.splice(0,1,courses1);
+        }
+        if(courses2 != courses[1]){
+            courses.splice(1,1,courses2);
+        }
+        if(courses3 != courses[2]){
+            courses.splice(2,1,courses3);
+        }
+        if(courses4 != courses[3]){
+            courses.splice(3,1,courses4);
+        }
+        if(courses5 != courses[4]){
+            courses.splice(4,1,courses5);
+        }
+
+        alert(courses);
+        
+    </script>
+</body>
+</html>

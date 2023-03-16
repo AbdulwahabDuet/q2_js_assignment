@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A35to38</title>
+</head>
+<body>
+  <script>
+   function factorial(num) {
+  if (num < 0) {
+    return -1; // return -1 if input is negative
+  } else if (num == 0) {
+    return 1; // return 1 if input is 0
+  } else {
+    return (num * factorial(num - 1)); // recursively calculate factorial for positive input
+  }
+}
+
+// Prompt user to enter input
+var input_value = Number(prompt("Enter a number: "));
+
+// Call the factorial function with the user's input
+var result = factorial(input_value);
+
+// Display the result
+alert("Factorial of " + input_value + " is " + result);
+
+</script>
+</body>
+</html>

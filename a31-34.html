@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a31to34</title>
+</head>
+<body>
+    <script>
+        let name = prompt("Enter Your Name", "abdul wahab");
+        let date = Number(prompt("Enter YOUR DATE IN NUMBER","4")); 
+        let month = Number(prompt("Enter YOUR DATE IN NUMBER","08")); 
+        let year = Number(prompt("Enter YOUR DATE IN NUMBER","2001")); 
+        let DOB = new Date();
+        DOB.setDate(date);
+        DOB.setMonth(month);
+        DOB.setFullYear(year);
+        let time = new Date();
+        let hour = time.getHours();
+        if(hour>=0 && hour <=12){
+            alert("Hello " + name + " Good Morning");
+        }
+        else if(hour>12 && hour<=17){
+            alert("Hello " + name + " Good After Noon");
+        }
+        else{
+            alert("Hello " + name + " Good Evening");
+        }
+       alert("My Date Of Birth Is  = " + date + "/"+ month +"/"+ year);
+        
+       const current_date = new Date();
+       const ageInMillis = current_date - DOB;
+
+        // convert milliseconds to human-readable format
+        const ageInSeconds = ageInMillis / 1000;
+        const ageInMinutes = ageInSeconds / 60;
+        const ageInHours = ageInMinutes / 60;
+        const ageInDays = ageInHours / 24;
+        const ageInMonths = ageInDays / 30;
+        const ageInYears = ageInMonths / 12;
+
+        // print messages to console
+        alert(`You are ${Math.floor(ageInYears)} years ${Math.floor(ageInMonths % 12)} months ${Math.floor(ageInDays % 30)} days ${Math.floor(ageInHours % 24)} hours ${Math.floor(ageInMinutes % 60)} minutes ${Math.floor(ageInSeconds % 60)} seconds old`);
+        alert(`Your age in days is ${Math.floor(ageInDays)}`);
+
+        // Set your birthdate in the format of "Month Day, Year"
+
+// Get today's date
+const today = new Date();
+
+// Set the year of your next birthday
+let nextBirthday = new Date(today.getFullYear(), DOB.getMonth(), DOB.getDate());
+
+// If your birthday has already passed this year, add 1 to the year for the next birthday
+if (today > nextBirthday) {
+  nextBirthday.setFullYear(nextBirthday.getFullYear() + 1);
+}
+
+// Calculate the difference between today's date and your next birthday
+const timeDiff = nextBirthday.getTime() - today.getTime();
+
+// Convert milliseconds to days, hours, minutes, and seconds
+const daysLeft = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+const hoursLeft = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minsLeft = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+const secsLeft = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+// Print the results to the console
+alert(`There are ${daysLeft} days, ${hoursLeft} hours, ${minsLeft} minutes, and ${secsLeft} seconds left until your next birthday.`);
+        
+    </script>
+</body>
+</html>

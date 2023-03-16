@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A35to38</title>
+</head>
+<body>
+    <script>
+        let input_value = prompt("Enter Value","cloUd naTive computinG");
+    
+       function capitalizeFirstLetter(str) {
+  // Split the string into an array of words
+  let words = str.split(" ");
+  
+  // Iterate over each word and capitalize the first letter
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+  }
+  
+  // Join the words back into a string and return it
+  return words.join(" ");
+}
+
+// Example usage
+
+let capitalizedSentence = capitalizeFirstLetter(input_value);
+alert(capitalizedSentence);
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 18 to 20</title>
+</head>
+<body>
+    <script>
+        // Define an empty array to store course names
+var courses = [];
+
+// Prompt the user to input the names of 5 courses and save them in the array
+var course1 = prompt("Please enter the name of course 1:","a");
+courses.push(course1);
+var course2 = prompt("Please enter the name of course 2:","b");
+courses.push(course2);
+var course3 = prompt("Please enter the name of course 3:" ,"c");
+courses.push(course3);
+var course4 = prompt("Please enter the name of course 4:","d");
+courses.push(course4);
+var course5 = prompt("Please enter the name of course 5:","e");
+courses.push(course5);
+
+// Print the courses array in an alert box
+alert("The courses you entered are:\n" + courses);
+
+// Use a for loop to prompt the user to edit any course name and update the array
+for (var i = 0; i < courses.length; i++) {
+  var course = prompt("Do you want to edit the name of course " + (i+1) + "?", courses[i]);
+  if (course != courses[i]) {
+    courses.splice(i, 1, course);
+  }
+}
+
+// Print the updated courses array in an alert box
+alert("The updated courses are:\n" + courses);
+
+    </script>
+</body>
+</html>
